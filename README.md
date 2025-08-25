@@ -218,14 +218,6 @@ The portfolio is fully responsive and optimized for:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
-
-**Smitkumar Patel**
-- Email: smitkumarpatel4@outlook.com
-- Phone: (626) 464-0186
-- LinkedIn: [linkedin.com/in/smitkumarpatel4/](https://linkedin.com/in/smitkumarpatel4/)
-- GitHub: [github.com/smitkumarpatel4](https://github.com/smitkumarpatel4)
-
 ## 🙏 Acknowledgments
 
 - Font Awesome for icons
