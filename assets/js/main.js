@@ -88,16 +88,34 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-// Email sending function
+// Email sending function using EmailJS
 function sendEmail(name, email, subject, message) {
-    // Option 1: Using EmailJS (requires setup)
-    // You can integrate EmailJS or similar service here
+    // Initialize EmailJS
+    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key
     
-    // Option 2: Using mailto link (fallback)
-    const mailtoLink = `mailto:smitkumarpatel4@outlook.com?subject=Portfolio Contact: ${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+    // EmailJS template parameters
+    const templateParams = {
+        to_name: "Smitkumar Patel",
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message,
+        reply_to: email
+    };
     
-    // Open default email client
-    window.open(mailtoLink);
+    // Send email using EmailJS
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+        .then(function(response) {
+            console.log("SUCCESS! Email sent successfully:", response);
+            showNotification('Email sent successfully! I will get back to you soon.', 'success');
+        }, function(error) {
+            console.log("FAILED! Email sending failed:", error);
+            showNotification('Sorry, there was an error sending your message. Please try again or email me directly.', 'error');
+            
+            // Fallback to mailto link
+            const mailtoLink = `mailto:smitkumarpatel4@outlook.com?subject=Portfolio Contact: ${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+            window.open(mailtoLink);
+        });
     
     // Log the form submission (for debugging)
     console.log('Contact Form Submission:', {
