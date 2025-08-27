@@ -73,7 +73,10 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission
+        // Send email using EmailJS or similar service
+        sendEmail(name, email, subject, message);
+        
+        // Show success message
         showNotification('Thank you for your message! I will get back to you soon.', 'success');
         this.reset();
     });
@@ -83,6 +86,27 @@ if (contactForm) {
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+}
+
+// Email sending function
+function sendEmail(name, email, subject, message) {
+    // Option 1: Using EmailJS (requires setup)
+    // You can integrate EmailJS or similar service here
+    
+    // Option 2: Using mailto link (fallback)
+    const mailtoLink = `mailto:smitkumarpatel4@outlook.com?subject=Portfolio Contact: ${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+    
+    // Open default email client
+    window.open(mailtoLink);
+    
+    // Log the form submission (for debugging)
+    console.log('Contact Form Submission:', {
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+        timestamp: new Date().toISOString()
+    });
 }
 
 // Notification system
@@ -339,3 +363,4 @@ console.log(`
 'color: #10b981; font-size: 12px;',
 'color: #10b981; font-size: 12px;'
 );
+
