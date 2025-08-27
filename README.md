@@ -1,6 +1,10 @@
 # Smitkumar Patel - Personal Portfolio Website
 
-A modern, responsive personal portfolio website showcasing software engineering skills, professional experience, and projects.
+A modern, responsive personal portfolio website showcasing software engineering skills, professional experience, and projects. **Live on GitHub Pages!**
+
+## 👨‍💻 About Me
+
+**Smitkumar Patel** is a dedicated Software Engineer with over **5+ years of experience** in enterprise application development, specializing in J2EE, Spring Framework, and RESTful web services. Currently working at **Registrar Corp** in Hampton, VA, leading the development of large-scale enterprise applications that serve over 30,000 clients across 190+ countries.
 
 ## 🌟 Features
 
@@ -14,7 +18,11 @@ A modern, responsive personal portfolio website showcasing software engineering 
 
 ## 🚀 Live Demo
 
-**GitHub Pages:** [https://smitkumarpatel4.github.io/smit-patel-portfolio/](https://smitkumarpatel4.github.io/smit-patel-portfolio/)
+**🌐 Live Portfolio:** [https://smitkumarpatel4.github.io/smit-patel-portfolio/](https://smitkumarpatel4.github.io/smit-patel-portfolio/)
+
+**📧 Contact:** smitkumarpatel4@outlook.com  
+**🔗 LinkedIn:** [linkedin.com/in/smitkumarpatel4/](https://linkedin.com/in/smitkumarpatel4/)  
+**💻 GitHub:** [github.com/smitkumarpatel4](https://github.com/smitkumarpatel4)
 
 ## 📋 Table of Contents
 
@@ -36,6 +44,10 @@ A modern, responsive personal portfolio website showcasing software engineering 
   - JavaScript (ES6+)
   - Font Awesome Icons
   - Google Fonts (Inter)
+
+- **Backend & Services:**
+  - Formspree (Contact Form)
+  - GitHub Pages (Hosting)
 
 - **Development:**
   - Node.js (for local server)
@@ -227,5 +239,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Last Updated:** January 2025
-**Version:** 1.0.0
+**Last Updated:** January 2025  
+**Version:** 1.0.0  
+**Status:** ✅ Live on GitHub Pages
