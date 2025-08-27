@@ -31,10 +31,8 @@ A modern, responsive personal portfolio website showcasing software engineering 
 - [Technologies Used](#-technologies-used)
 - [Project Structure](#-project-structure)
 - [Local Development](#-local-development)
-- [Deployment Options](#-deployment-options)
+- [Deployment](#-deployment)
 - [Customization](#-customization)
-- [Contributing](#-contributing)
-- [License](#-license)
 
 ## 🛠️ Technologies Used
 
@@ -100,73 +98,20 @@ smit-patel-portfolio/
    - Simply open `index.html` in your browser
    - Or use any local server like Live Server (VS Code extension)
 
-## 🌐 Deployment Options
+## 🚀 Deployment
 
-### 1. GitHub Pages (Recommended)
+### GitHub Pages (Current Setup)
 
-**Automatic Deployment:**
-1. Go to your repository on GitHub
-2. Navigate to **Settings** → **Pages**
-3. Under **Source**, select **Deploy from a branch**
-4. Choose **master** branch and **/(root)** folder
-5. Click **Save**
-6. Your site will be available at: `https://smitkumarpatel4.github.io/smit-patel-portfolio/`
+Your portfolio is currently deployed on GitHub Pages at:
+**https://smitkumarpatel4.github.io/smit-patel-portfolio/**
 
-**Manual Deployment:**
+**To update your live site:**
 ```bash
-# Create and switch to gh-pages branch
-git checkout -b gh-pages
-
-# Push to GitHub
-git push origin gh-pages
-
-# Go back to master branch
-git checkout master
+git add .
+git commit -m "Update portfolio"
+git push origin master
 ```
-
-### 2. Netlify
-
-1. **Drag & Drop Method:**
-   - Go to [netlify.com](https://netlify.com)
-   - Drag your project folder to the deploy area
-   - Your site will be live instantly
-
-2. **Git Integration:**
-   - Connect your GitHub repository
-   - Netlify will automatically deploy on every push
-
-### 3. Vercel
-
-1. **Install Vercel CLI:**
-   ```bash
-   npm i -g vercel
-   ```
-
-2. **Deploy:**
-   ```bash
-   vercel
-   ```
-
-### 4. Firebase Hosting
-
-1. **Install Firebase CLI:**
-   ```bash
-   npm install -g firebase-tools
-   ```
-
-2. **Initialize and deploy:**
-   ```bash
-   firebase login
-   firebase init hosting
-   firebase deploy
-   ```
-
-### 5. Traditional Web Hosting
-
-Upload the following files to your web server:
-- `index.html`
-- `assets/` folder (entire directory)
-- `package.json` (optional)
+GitHub Pages will automatically update in 2-5 minutes.
 
 ## 🎨 Customization
 
@@ -202,40 +147,18 @@ The portfolio is fully responsive and optimized for:
 - **Tablet** (768px - 1199px)
 - **Mobile** (320px - 767px)
 
-## 🔧 Performance Optimization
+## 🔧 Performance & SEO
 
-- **Minified CSS and JS** (for production)
-- **Optimized images** (WebP format recommended)
-- **Lazy loading** for images
-- **Preload critical resources**
-
-## 🚀 SEO Features
-
-- Meta tags for social sharing
-- Open Graph tags
-- Twitter Card support
-- Semantic HTML structure
-- Alt text for images
-- Structured data (schema.org)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- **Optimized loading** with preloaded critical resources
+- **SEO optimized** with meta tags, Open Graph, and Twitter Card support
+- **Semantic HTML** structure for better search engine visibility
+- **Responsive design** for all devices
 
 ## 🙏 Acknowledgments
 
 - Font Awesome for icons
 - Google Fonts for typography
 - GitHub for hosting
-- All contributors and supporters
 
 ---
 
