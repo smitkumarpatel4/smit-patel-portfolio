@@ -53,33 +53,16 @@ window.addEventListener('scroll', () => {
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
-        
-        // Basic validation
-        if (!name || !email || !subject || !message) {
-            showNotification('Please fill in all fields', 'error');
-            return;
-        }
-        
-        if (!isValidEmail(email)) {
-            showNotification('Please enter a valid email address', 'error');
-            return;
-        }
-        
-        // Send email using EmailJS or similar service
-        sendEmail(name, email, subject, message);
-        
-        // Show success message
-        showNotification('Thank you for your message! I will get back to you soon.', 'success');
-        this.reset();
+        // Let Formspree handle the submission
+        // We'll add a success message after redirect
     });
+}
+
+// Check if user was redirected from Formspree success
+if (window.location.search.includes('success=true')) {
+    showNotification('Thank you for your message! I will get back to you soon.', 'success');
+    // Clean up the URL
+    window.history.replaceState({}, document.title, window.location.pathname);
 }
 
 // Email validation function
